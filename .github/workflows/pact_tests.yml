@@ -26,6 +26,6 @@ jobs:
         run: |
           npx pact-broker publish ./pact/pacts \
             --consumer-app-version=${{ github.sha }} \
-            --broker-base-url=${{ secrets.PACT_BROKER_URL }} \
+            --broker-base-url=https://na-36d3e7c9.pactflow.io \
             --broker-token=${{ secrets.PACT_BROKER_TOKEN }} \
             --branch=${{ github.ref_name }}
